@@ -1,0 +1,509 @@
+/*===================================== CSS RESET ===========================================*/
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* ======================================================== grid =====================================================*/
+* {
+  box-sizing: border-box; 
+  }
+
+.body {
+    list-style-type: none;
+    font-family: 'Open Sans';
+    margin: 0 auto; 
+    }
+  
+.row:before,
+.row:after {
+  content: "";
+  display: table;
+  clear: both; 
+  }
+
+[class*="col-"] {
+  float: left;
+  padding: 12px;
+  width: 100%;
+  }
+  
+$total-columns: 12;
+@for $i from 1 through $total-columns {
+            .col-#{$i} {
+               width: ($i/12 * 100%)
+            };
+}
+  
+$total-columns: 11;
+@for $i from 0 through $total-columns {
+            .col-offset-#{$i} {
+              margin-left:  ($i/12 * 100%)
+            };
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; 
+}
+
+
+$white-color: #ffffff;
+
+$black-color: #000000;
+
+$light-blue-color: #00C7E8;
+
+/* ======================================================== header =====================================================*/
+
+.header {
+ 		background-color: #313234;
+  		height: 70px;
+  		background-size: cover;
+		div > ul {
+		  margin: 0px;
+		  padding: 0px;
+		  list-style-type: none;
+		  float: right; }
+		div ul > li {
+		  display: inline-block; }
+		div > ul > li > a {
+		  line-height: 50px;
+		  padding: 0 20px;
+		  display: block;
+		  color: $white-color;
+		  text-decoration: none;
+		  text-transform: uppercase; }
+		div > ul > li > a:hover {
+		background-color: #7a7c81; }
+		div > .img2 {
+		  float: left;
+		  color: $white-color; }
+  }
+
+/* =============================================== hero ==============================================================*/
+
+.hero {
+  background-image: url("https://www.nasa.gov/sites/default/files/styles/image_card_4x3_ratio/public/thumbnails/image/iss053e119677.jpg");
+  width: 100%;
+  background-size: cover;
+  height: 400px;
+  float: right;
+  position: relative; 
+  }
+
+.slogan {
+
+		  position: absolute;
+		  bottom: 100px;
+		  right: 0px;
+		  float: right;
+		  max-width: 800px;
+		  text-transform: uppercase;
+		  margin: 0 auto;
+		  background-color: rgba(14, 13, 13, 0.5);
+		  margin-top: 110px;
+		  height: 110px; 
+		
+		  h1 {
+	      padding: 20px 5px 20px 5px;
+		  color: $white-color;
+		  font-size: 35px;
+		  letter-spacing: 2px; }
+  }
+
+/* ====================================================== benefit =====================================================*/
+.benefit {
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px; 
+  }
+.benefit2 {
+  text-align: justify;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 18px; 
+  }
+.icon {
+  display: block;
+  height: 100px;
+  width: 100px;
+  border: 0;
+  padding: 25px;
+  border-radius: 20%;
+  margin: 0 auto;
+  cursor: pointer;
+  font-size: 50px;
+  color: $white-color;
+  }
+.res {
+  background-color: $black-color;
+  }
+
+.fully {
+  background-color: $light-blue-color;
+  }
+
+.work {
+  background-color: $black-color;
+  }
+
+/* ======================================================== works =====================================================*/
+
+.works {
+  padding: 0 25%;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  }
+
+.works2 {
+  text-align: justify;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 18px; 
+  }
+
+/* ======================================================== gallery ====================================================*/
+
+section.gallery div[class*="picture-"] {
+  position: relative;
+  padding: 0;
+  margin: 0 auto; 
+  }
+
+section.gallery {
+  height: 500px; 
+  }
+
+.layer {
+	  position: absolute;
+	  bottom: 0px;
+	  left: 0;
+	  right: 0px;
+	  top: 0px;
+	  height: 100%;
+	  width: 100%;
+	  opacity: 0;
+	  text-align: center; 
+	
+	  i.fa {
+	  cursor: pointer;
+	  width: 45px;
+	  height: 45px;
+	  line-height: 250px; }
+  }
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 250px; 
+  }
+
+section.gallery div[class*="picture-"]:hover .layer {
+  opacity: 1;
+  }
+
+section.gallery div[class*="picture-"]:hover .image {
+  opacity: 0.3; 
+  }
+
+/* ======================================================== team ========================================================*/
+
+.team {
+		  margin-top: 3%; 
+		  h4 {
+		  padding-top: 20px;
+		  font-family: Arial, Helvetica, sans-serif;
+		  color: $black-color;
+		  font-size: 25px;
+		  text-align: center;
+		  font-weight: bold; }
+  }
+
+.person {
+		  position: relative;
+		  border-radius: 50%;
+		  width: 250px;
+		  height: 250px;
+		  margin: 0 auto; 
+		  &:hover .overlay {
+		  opacity: 0.8;
+		  cursor: pointer; 
+		  }
+  }
+.image2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border-radius: 50%;
+  background-color: #051052;
+  }
+
+.text {
+  color: $white-color;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  letter-spacing: 3px;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  }
+
+
+/* ======================================================== awesome =====================================================*/
+.awesome {
+		  position: relative;
+		  background: url("https://voyager.jpl.nasa.gov/assets/images/galleries/images-voyager-took/saturn/saturn.gif");
+		  background-size: cover;
+		  margin-top: 3%;
+		  color: $white-color;
+		  height: 350px; 		  
+		  .col-6 {
+		  width: 500px;
+		  text-align: left; 
+		  }
+		 .col-2 {
+		  top: 80px;
+		  width: 250px; 
+		  }
+  }
+.picture {
+		  position: relative;
+		  height: 350px;
+		  width: 350px;
+		  margin-right: 20px; 	
+		  img {
+		  position: absolute;
+		  left: 0;
+		  bottom: 0;
+		  width: 100%;
+		  border-radius: 50%; }
+ }
+.awesome2 {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 20px; 
+  }
+.awesome3 {
+  font-size: 20px;
+  padding-bottom: 10px;
+  line-height: 25px;
+  text-align: justify;
+  }
+.awesome4 {
+  text-align: justify;
+  line-height: 20px; 
+  }
+
+/* ======================================================== numbers =====================================================*/
+
+section.numbers {
+			  height: 200px;
+			  text-align: center;
+			  padding-top: 40px; 
+			  h2 {
+			  color: $black-color;
+			  font-size: 55px;
+			  font-weight: bold;
+			  margin-bottom: 0px; 
+			  }
+			  h3 {
+			  color: $light-blue-color;
+			  font-size: 30px;
+			  font-weight: bold;
+			  margin-top: 5px; 
+			  }
+   }
+
+/*======================================================== footer ========================================================*/
+.footer {
+		  background-color: #313332;
+		  padding-top: 10px;
+		  height: 300px; 
+		  h2 {
+		  color: $white-color;
+		  font-size: 30px;
+		  text-align: center;
+		  padding-bottom: 20px; 
+		  }
+		  p {
+		  text-align: justify;
+		  color: $white-color;
+		  line-height: 20px;
+		  }
+		  .social > ul > li {
+		  display: inline-block;
+		  margin: 10px;
+		  border-radius: 5px;
+		  background-color: $light-blue-color; 
+		  }
+		 .social .fa {
+		  font-size: 20px;
+		  color: $white-color;
+		  line-height: 30px;
+		  width: 30px;
+		  height: 30px;
+		  text-align: center;
+		  }
+  }
+.footer1 {
+  padding-left: 30px; 
+  }
+.rights {
+  background-color: #191b1b;
+  background-size: cover; 
+  }
+.rights2 {
+  color: $white-color;
+  text-align: center;
+  font-weight: bold; 
+  }
+
+/*======================================================== Media Queries ========================================================*/
+
+@media (min-width: 768px) {
+
+  /* For desktop: */
+  
+  $total-columns: 12;
+@for $i from 1 through $total-columns {
+            .col-m-#{$i} {
+               width: ($i/12 * 100%)
+         };
+	  }
+ }
+
+@media (max-width: 767px) {
+	
+  /*For tablets: */
+  
+    $total-columns: 12;
+@for $i from 1 through $total-columns {
+            .col-s-#{$i} {
+               width: ($i/12 * 100%)
+    };
+    
+  }
+
+  /*=== header ===*/
+  
+  .header {
+		   height: auto; 
+		
+		   div > ul {
+		    float: none; }
+		
+		  div > ul > li {
+		    display: block;
+		    text-align: center; }
+		
+		  div > .img2 {
+		    float: none;
+		    text-align: center; }
+   }
+
+  /*=== hero ===*/
+  
+  .hero {
+    height: 100vh; 
+    }
+  .slogan {
+	    height: auto;
+	    width: auto; 
+	     h1 {
+	    font-size: 1rem; 
+	    }
+   }
+
+  /*=== gallery ===*/
+  
+  .gallery {
+    padding: 5px; }
+
+  /*=== team ===*/
+  
+  .team.person {
+    margin-right: 5px; }
+
+  /*=== awesome ===*/
+  
+  .awesome {
+	padding: 0px;
+	margin: 0 auto;
+	height: auto; 
+    }
+  .awesome2 .awesome3 .awesome4 {
+    font-size: 1rem;
+    }
+
+  /*=== numbers ===*/
+  
+  section.numbers {
+    height: auto; 
+    }
+
+  /*=== footer ===*/
+  
+  .footer {
+    height: auto;
+    font-size: 1rem; }
+    }
